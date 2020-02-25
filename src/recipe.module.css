@@ -1,0 +1,32 @@
+.recipe {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    flex-wrap: wrap;
+    width:40%;
+    box-shadow:1px 2px 3px black;
+    background-color: blanchedalmond;
+    margin:10px;
+}
+
+.title {
+    font-size:24px;
+    margin:0;
+    padding:10px;
+    font-weight:bold;
+}
+.calories {
+    font-size:20px;
+    margin:0;
+    padding:5px;
+}
+.ingredients {
+    font-size:20px;
+    margin:0;
+    padding:5px;
+}
+.listitem {
+    padding:8px 0;
+    
+}
