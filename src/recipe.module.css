@@ -1,20 +1,18 @@
 .recipe {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-around; */
-    align-items: center;
-    flex-wrap: wrap;
-    width:40%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width:98%;
     box-shadow:1px 2px 3px black;
     background-color: blanchedalmond;
     margin:10px;
 }
 
 .title {
-    font-size:24px;
+    font-size:36px;
     margin:0;
     padding:10px;
     font-weight:bold;
+    border-bottom: 2px solid black;
 }
 .calories {
     font-size:20px;
@@ -22,11 +20,23 @@
     padding:5px;
 }
 .ingredients {
-    font-size:20px;
-    margin:0;
-    padding:5px;
+    justify-self: center;
+    align-self: center;
+    font-size:24px;
+    margin-top:55px;
+    font-weight: bold;
+
+    padding:10px 20px ;
+    /* border-bottom: 2px solid black; */
+
 }
 .listitem {
     padding:8px 0;
     
 }
+
+img {
+    justify-self: center;
+    align-self: center;
+}
+
