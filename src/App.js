@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe'
-import './App.css';
+import Nav from './nav'
+import Input from './Input'
+import Content from './Content'
+import Footer from './Footer'
+// import './App.css';
 
 
 function App() {
@@ -17,7 +21,7 @@ function App() {
 
   useEffect(() => {
 
-    GetRecipes();
+    // GetRecipes();
 
   }, [query])
 
@@ -44,13 +48,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="header">GEtallRecipesnow</h1>
-      <form className="form" onSubmit={handleSubmit}>
+      <Nav></Nav>
+      <Input></Input>
+      <Content></Content>
+      <Footer></Footer>
+      {/* <form className="form" onSubmit={handleSubmit}>
         <input type="text" name="text" value={search} onChange={handleSearch} className="search-input"></input>
         <button type="submit" className="search-btn" >Search</button>
-      </form>
+      </form> */}
 
-      {!loaded ?
+      {/* {!loaded ?
         <h1>Loading....</h1>
        
         :  <div className="recipe">
@@ -65,7 +72,7 @@ function App() {
             loaded={loaded}
           />
         ))}
-      </div>}
+      </div>} */}
     </div>
   );
 }

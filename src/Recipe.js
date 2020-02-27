@@ -2,17 +2,11 @@ import React from 'react'
 import style from './recipe.module.css'
 const Recipe = (props) => {
 
-
-
     const { title, image, calories, ingredients, servings, healthLabels, nutrients } = props;
     const ENER_KACL = (nutrients.ENERC_KCAL)
     const FAT = (nutrients.FAT);
     const PROCNT = (nutrients.PROCNT);
     const CHOLE = (nutrients.CHOLE);
-
-
-
-
 
     return (
         <div className={style.recipe}>
@@ -32,12 +26,8 @@ const Recipe = (props) => {
                     <li>{FAT.label}: {Math.floor(FAT.quantity * 100) / 100} {FAT.unit}</li>
                     <li>{PROCNT.label}: {Math.floor(PROCNT.quantity * 100) / 100} {PROCNT.unit}</li>
                     <li>{CHOLE.label}: {Math.floor(CHOLE.quantity * 100) / 100} {CHOLE.unit}</li>
-
-                    
-                
                     
                 </ul>
-
 
                 {/* <p className={style.calories}>Calories:{calories}</p> */}
             </div>
