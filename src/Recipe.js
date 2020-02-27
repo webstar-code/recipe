@@ -29,7 +29,7 @@ const Recipe = (props) => {
                     <li>Nutrients</li>
                     
                     <li>{ENER_KACL.label}: {Math.floor(ENER_KACL.quantity * 100) / 100} {ENER_KACL.unit}</li>
-                    <li>{FAT.label}: {Math.floor(FAT.quantity * 100) / 100}) {FAT.unit}</li>
+                    <li>{FAT.label}: {Math.floor(FAT.quantity * 100) / 100} {FAT.unit}</li>
                     <li>{PROCNT.label}: {Math.floor(PROCNT.quantity * 100) / 100} {PROCNT.unit}</li>
                     <li>{CHOLE.label}: {Math.floor(CHOLE.quantity * 100) / 100} {CHOLE.unit}</li>
 

@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="header">Recipes</h1>
+      <h1 className="header">GEtallRecipesnow</h1>
       <form className="form" onSubmit={handleSubmit}>
         <input type="text" name="text" value={search} onChange={handleSearch} className="search-input"></input>
         <button type="submit" className="search-btn" >Search</button>
