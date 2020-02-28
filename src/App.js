@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe'
 import Nav from './nav'
-import Input from './Input'
+// import Input from './Input'
 import Content from './Content'
 import Footer from './Footer'
-// import './App.css';
+import './App.css';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
 
-    // GetRecipes();
+    GetRecipes();
 
   }, [query])
 
@@ -49,15 +49,38 @@ function App() {
   return (
     <div className="App">
       <Nav></Nav>
-      <Input></Input>
-      <Content></Content>
-      <Footer></Footer>
-      {/* <form className="form" onSubmit={handleSubmit}>
+      <div className="Input">
+         <form className="form" onSubmit={handleSubmit}>
         <input type="text" name="text" value={search} onChange={handleSearch} className="search-input"></input>
         <button type="submit" className="search-btn" >Search</button>
-      </form> */}
+      </form> 
+      <p className="desc">Find your favourite Recipes Here</p>
+      </div>
 
-      {/* {!loaded ?
+      {!loaded ?
+        <h1>Loading....</h1>
+       
+        :  <div className="recipe">
+        {recipes.map((el, index) => (
+          <Content key={index} title={el.recipe.label}
+            image={el.recipe.image}
+            calories={el.recipe.calories}
+            ingredients={el.recipe.ingredients}
+            servings={el.recipe.yield}
+            healthLabels={el.recipe.healthLabels}
+            nutrients={el.recipe.totalNutrients}
+            loaded={loaded}
+          />
+        ))}
+        </div>
+      }
+
+
+      {/* <Content></Content> */}
+      <Footer></Footer>
+    
+{/* 
+       {!loaded ?
         <h1>Loading....</h1>
        
         :  <div className="recipe">
@@ -72,7 +95,7 @@ function App() {
             loaded={loaded}
           />
         ))}
-      </div>} */}
+      </div>}  */}
     </div>
   );
 }

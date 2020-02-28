@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -40,22 +40,45 @@ const useStyles = makeStyles(theme => ({
 
 }))
 
-function Input() {
+function Input(props) {
 
     const classes = useStyles();
+    const {GetRecipes} = props;
+    const [search, setSearch] = useState('');
+    const [query, setQuery] = useState('chicken');
 
+    useEffect({
+
+    },[query])
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value)
+    console.log(search);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setQuery(search)
+    console.log(query);
+  }
 
     return(
         <div className={classes.container}>
-            <form className={classes.form}>
-                <TextField id="outlined-secondary"
+            <form className={classes.form} onSubmit={handleSubmit}>
+        <input type="text" name="text" value={search} onChange={handleSearch} className={classes.textfield}></input>
+        <button type="submit" className="search-btn" >Search</button>
+                
+                {/* <TextField id="outlined-secondary"
                 // label="Search"
                 placeholder="Search"
                 variant="outlined"
                 color="secondary"
-                className={classes.textfield}>
-                </TextField>
-                <Button variant="contained" className={classes.button}>Search</Button>
+                className={classes.textfield}
+                value={search}
+                onChange={handleSearch}
+                >
+                </TextField> */}
+                {/* <Button type="submit" variant="contained" className={classes.button}>Search</Button> */}
                 
             </form>
             <Typography variant="h2" className={classes.desc}>Find your Favourite food recipes here</Typography>

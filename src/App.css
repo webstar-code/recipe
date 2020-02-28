@@ -1,48 +1,54 @@
 .App {
-  /* height:100%; */
-  font-family: sans-serif;
-  /* font-size:24px; */
-  margin:auto;
-  background: rgb(240,212,139);
-background: linear-gradient(90deg, rgba(240,212,139,1) 0%, rgba(255,118,118,1) 100%);
+  @font-face {
+    font-family: VarelaRound;
+    src: url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+  
+  }
+  @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+  font-family: 'Roboto', ;
+  
+
 }
 
-.header {
-  width: 100%;
-  height: 50px;
-  font-size:36px;
-  box-shadow: 1px 2px 2px black;
-  letter-spacing: 1px;
-  padding:10px;
-  margin: 0;
+.Input {
+  margin: 20px 0px 10px 0;
 }
+
 .form {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 10vh;
+  
 }
 
 .search-input {
-  width: 400px;
-  padding:10px;
+  width: 50%;
+  padding:20px;
   border-radius:10px;
   outline:none;
   border: 1px solid black;
   margin-right:10px;
+  font-size:24px;
 }
 
 .search-btn {
-  padding:10px 30px;
-  background-color: lightgreen;
+  padding:15px 30px;
+  background-color: #7bbb67;
   border:none;
-  border-radius: 20px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
   font-size:24px;
+  line-height: 20px;
 }
-.search-btn:hover {
-  box-shadow:1px 2px 2px black;
+
+.desc {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 /* .recipe {
